@@ -20,11 +20,11 @@ import java.util.Map;
 @Controller
 @RequestMapping("/report/**")
 public class ReportController {
-	
 	@Autowired private ApplicationContext appContext;
 
 	@RequestMapping(value = "/pdf", method = RequestMethod.GET)
 	public ModelAndView getPdf() {
+		System.out.println("Imprimiendo");
 	    JasperReportsPdfView view = new JasperReportsPdfView();
 	    view.setUrl("classpath:testReport.jrxml");
 	    
@@ -39,7 +39,6 @@ public class ReportController {
 	    view.setApplicationContext(appContext);
 	    return new ModelAndView(view, params);
 	}
-	
 	
     @RequestMapping("/pdf2")
     public ModelAndView generatePdfReport(ModelAndView modelAndView){ 

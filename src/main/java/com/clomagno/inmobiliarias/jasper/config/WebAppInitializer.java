@@ -23,9 +23,9 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		rootContext.register(
 				MVCConfiguration.class, 
 				SecurityConfiguration.class,
-				JasperBeans.class,
-				ReportController.class);
-
+				ReportController.class
+				);
+		
 		servletContext.addListener(new ContextLoaderListener(rootContext));
 		servletContext.setInitParameter("defaultHtmlEscape", "true");
 
@@ -46,7 +46,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		
 		mvcContext.setParent(rootContext);
 		ServletRegistration.Dynamic appServlet = servletContext.addServlet(
-				"webservice", new DispatcherServlet(mvcContext));
+				"jasperServer", new DispatcherServlet(mvcContext));
 		appServlet.setLoadOnStartup(1);
 		Set<String> mappingConflicts = appServlet.addMapping("/*");
 
@@ -62,7 +62,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		WebApplicationContext rootContext = createRootContext(servletContext);
 		
 		configureSpringMvc(servletContext, rootContext);
-
-		configureSpringSecurity(servletContext, rootContext);		
+		
+		configureSpringSecurity(servletContext, rootContext);
 	}
 }
