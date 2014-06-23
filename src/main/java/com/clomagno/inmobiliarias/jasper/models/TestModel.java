@@ -1,9 +1,15 @@
 package com.clomagno.inmobiliarias.jasper.models;
 
-public class TestModel {
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class TestModel{
 	private String field;
 
-	public TestModel(String field) {
+	@JsonCreator
+	public TestModel(@JsonProperty("field") String field) {
 		super();
 		this.field = field;
 	}
@@ -15,6 +21,4 @@ public class TestModel {
 	public void setField(String field) {
 		this.field = field;
 	}
-	
-	
 }
