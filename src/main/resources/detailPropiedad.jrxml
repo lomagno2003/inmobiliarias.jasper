@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c243246-1aca-406e-b2ae-e9354817dccf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<field name="porcentajeDeGastos" class="java.lang.String"/>
+	<field name="consorcio" class="java.lang.String"/>
+	<field name="propietario" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="369" height="35" uuid="32233177-09aa-4e19-800b-408cb02cc81c"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Detalle de la propiedad]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="0" width="286" height="20" uuid="7ec4ca7d-4e07-4924-bb95-4c9edca01b9b"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="271" height="20" uuid="dd930d70-3352-4037-889a-504197e9b72d"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="271" height="20" uuid="e88004aa-5d6e-4109-aaf3-dc8d3c0b6af6"/>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="271" height="20" uuid="0e4179bf-15ed-4672-8c9c-fd7d1890462f"/>
+				<text><![CDATA[Porcentaje de gastos]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="20" width="286" height="20" uuid="25d9d71b-bb0e-4dab-8008-d48bdfa60d57"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="40" width="286" height="20" uuid="5eb48f9d-aa46-47b3-99c3-b5734a82ff85"/>
+				<textFieldExpression><![CDATA[$F{porcentajeDeGastos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="271" height="20" uuid="f41bf80d-793b-4320-a2d2-cdc3e745dab6"/>
+				<text><![CDATA[Consorcio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="271" height="20" uuid="1f8d7fdf-ca6e-4dc1-9dca-278a94dd8d55"/>
+				<text><![CDATA[Propietario]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="60" width="286" height="20" uuid="311e5591-4bcd-4807-b683-6dda269df0d1"/>
+				<textFieldExpression><![CDATA[$F{consorcio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="80" width="286" height="20" uuid="670a3c77-41e3-4f42-ba0c-3f9c2ea7d591"/>
+				<textFieldExpression><![CDATA[$F{propietario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

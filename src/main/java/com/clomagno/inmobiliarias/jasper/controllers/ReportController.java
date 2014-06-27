@@ -15,6 +15,7 @@ import org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
  
@@ -30,6 +31,7 @@ public class ReportController {
 	@RequestMapping(value = "/{outputFormat}", method = RequestMethod.GET)
 	public ModelAndView getReport(@PathVariable("outputFormat") String outputFormat,@RequestParam("reportName") String reportName,@RequestParam("body") String body) {
 		try {
+			body = java.net.URLDecoder.decode(body, "UTF-8");
 			InputStream inputStream = new ByteArrayInputStream(body.getBytes());
 			JsonDataSource dataSource = new JsonDataSource(inputStream);
 			
@@ -55,6 +57,8 @@ public class ReportController {
 		} catch (JRException e) {
 			e.printStackTrace();
 		} catch (UnknowOutputFormatException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 		return null;
