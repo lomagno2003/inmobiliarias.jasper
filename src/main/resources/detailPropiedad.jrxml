@@ -16,17 +16,22 @@
 	</background>
 	<title>
 		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="162" height="79" uuid="fa1a20dc-f06a-44b9-aad8-9c3d6d4d9390"/>
+				<imageExpression><![CDATA["/home/clomagno/Projects/Inmobiliarias/workspace/inmobiliarias.jasper/src/main/resources/LogoLugarAndino.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="369" height="35" uuid="32233177-09aa-4e19-800b-408cb02cc81c"/>
+				<reportElement x="0" y="0" width="555" height="35" uuid="32233177-09aa-4e19-800b-408cb02cc81c"/>
 				<textElement>
 					<font size="18"/>
 				</textElement>
 				<text><![CDATA[Detalle de la propiedad]]></text>
 			</staticText>
 		</band>
-	</title>
-	<pageHeader>
-		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<detail>
 		<band height="125" splitType="Stretch">
