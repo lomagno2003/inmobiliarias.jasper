@@ -2,13 +2,13 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c243246-1aca-406e-b2ae-e9354817dccf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
-	<queryString language="json">
+	<property name="ireport.y" value="75"/>
+	<queryString language="ejbql">
 		<![CDATA[]]>
 	</queryString>
 	<field name="nombre" class="java.lang.String"/>
 	<field name="direccion" class="java.lang.String"/>
-	<field name="porcentajeDeGastos" class="java.lang.String"/>
+	<field name="porcentajeGastosComunes" class="java.lang.String"/>
 	<field name="consorcio" class="java.lang.String"/>
 	<field name="propietario" class="java.lang.String"/>
 	<background>
@@ -57,7 +57,7 @@
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="271" y="40" width="286" height="20" uuid="5eb48f9d-aa46-47b3-99c3-b5734a82ff85"/>
-				<textFieldExpression><![CDATA[$F{porcentajeDeGastos}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{porcentajeGastosComunes}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="0" y="60" width="271" height="20" uuid="f41bf80d-793b-4320-a2d2-cdc3e745dab6"/>
